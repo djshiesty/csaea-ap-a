@@ -53,18 +53,54 @@ public class CrashCourse { //class header
         // LOGICAL OPERATORS
         // Order of precedence: NOT: !  AND: &&  OR: ||
 
-        boolean e = false; boolean f =  true;
+        boolean f = false; boolean t = true;
 
         // Predict output: True or False?
-        System.out.println(!e); //true
-        System.out.println(e && f); //false
-        System.out.println(e || f); //true
-        boolean qqq = e&&f;
-        System.out.println(e || f && !e); //true
+        System.out.println(!f); //true
+        System.out.println(f && t); //false
+        System.out.println(f || t); //true
+        System.out.println(f || t && !f); //true
 
-        System.out.println("this is:" + qqq); //short circuits after checking e: Java does not need to check f if e is already False
+        System.out.println(f && t); // short circuits to FALSE after checking f && -- java does not need to check t.
+        System.out.println(t || (f && t)); //short circuits after checking the first t.
+
+        //CASTING (converting)
+        int g = (int)5.5;
+        System.out.println(g);
+        double h = (double)5/6;
+        System.out.println(h);
+
+        //STRINGS
+        String s1 = "Goodnight";
+        String s2 = " and ";
+        String s3 = "Goodbye";
+        String result = s1 + s2 + s3;
+        result += ", Cowboy.";
+        System.out.println(result + "\n");
+        
+        //ARRAYS
+        int[] arry1 = new int[10];
+        System.out.println(arry1);
+        System.out.println("length: " + arry1.length);
+
+        arry1[0] = 11;
+        arry1[1] = 2;
+        
+        System.out.println("Remainder: " + arry1[0] % arry1[1]);
+
+        int[] arry2 = {34,52,3,64,32};
+        System.out.println("arry2: " + arry2);
+
+        //2D arrays (grid or a table)
+
+        int[][] arryGrid1 = new int[4][3];
+        // 0 0 0
+        // 0 0 0
+        // 0 0 0
+        // 0 0 0
+
+        System.out.println("Rows: " + arryGrid1.length);
+        System.out.println("Columns: " + arryGrid1[0].length);
 
     }
-
-
 }
