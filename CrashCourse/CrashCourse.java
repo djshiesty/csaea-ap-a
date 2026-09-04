@@ -1,3 +1,5 @@
+import java.util.ArrayList;
+
 public class CrashCourse { //class header
  
     public static void main(String[] args) {
@@ -101,6 +103,33 @@ public class CrashCourse { //class header
 
         System.out.println("Rows: " + arryGrid1.length);
         System.out.println("Columns: " + arryGrid1[0].length);
+
+        int[][] arryGrid2 = { {7,8,9}, 
+                              {4,5,6}, 
+                              {1,2,3} };
+        
+        System.out.println(arryGrid2[0][1]); //access number 8
+        System.out.println(arryGrid2[2][2]); //access number 3
+
+        System.out.println(arryGrid2);
+
+        //ARRAYLISTS
+        // Can be any size. Lots of built in fucntions to help.
+        // Avoid primitive data types. Special classes for Integer, Double, Boolean, String. Called "wrapper classes"
+
+        ArrayList<String> arryLst = new ArrayList<>();
+
+        arryLst.add("Word 1");
+        arryLst.add("Word 2");
+        arryLst.add("Word 3");
+        arryLst.remove(0);
+        arryLst.add(0,"Word 4");
+        arryLst.set(2, "Word 5");
+
+        System.out.println(arryLst);
+        System.out.println(arryLst.size());
+        System.out.println(arryLst.get(2)); 
+
 
     }
 }
