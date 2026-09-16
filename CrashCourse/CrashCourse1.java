@@ -1,6 +1,6 @@
 import java.util.ArrayList;
 
-public class CrashCourse { //class header
+public class CrashCourse1 { //class header
  
     public static void main(String[] args) {
         
