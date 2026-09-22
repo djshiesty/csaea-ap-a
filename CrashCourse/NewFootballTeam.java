@@ -1,5 +1,3 @@
-package CrashCourse;
-
 public class NewFootballTeam {
     
     public double winRate;
