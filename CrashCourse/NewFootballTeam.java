@@ -1,16 +1,18 @@
+package CrashCourse;
+
 public class NewFootballTeam {
     
-    private double winRate;
-    private int budget;
-    private int trophyCount = 0;
-    private double averageRating;
-    private int playGames = 10;
+    public double winRate;
+    public int budget;
+    public int trophyCount = 0;
+    public double averageRating;
+    public int playGames = 10;
     private int v = 0;
-    private int wins = 5;
-    private int streak = 0;
-    private String teamName;
-    private String manager;
-    private String teamLeague;
+    public int wins = 5;
+    public int streak = 0;
+    public String teamName;
+    public String manager;
+    public String teamLeague;
     private boolean gameResult = true;
 
     public NewFootballTeam(String teamName, String manager, String teamLeague) {
@@ -23,20 +25,22 @@ public class NewFootballTeam {
         averageRating = 5.0;
     }
 
-    public void playGame(boolean gameResult) {
+    public void playGame (boolean gameResult) {
         this.gameResult = gameResult;
         if (gameResult && averageRating > 6.0) {
             wins += 1;
             playGames++;
             streak ++;
+            System.out.println("Game won!");
         } else {
             playGames++;
             streak = 0;
+            System.out.println("Game lost!");
         }
     } 
 
     public void ManagerSacked () {
-        manager.replace(" ","new" + v);
+        manager = manager.replace(manager, "new" + v);
         v++;
         trophyCount -= 1;
         System.out.println("Manager has been sacked. New manager is: " + manager);
@@ -44,7 +48,7 @@ public class NewFootballTeam {
 
     public void budgetSurplus () {
         budget *= 1.25;
-        averageRating *= 1.1;
+        averageRating *= 1.21;
         if (playGames > 15 && winRate < 0.5) {
             budget *= 0.75;
             ManagerSacked();
