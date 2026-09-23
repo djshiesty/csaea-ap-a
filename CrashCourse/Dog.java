@@ -1,5 +1,3 @@
-package Dog
-
 public class Dog {
 
     // Data / attributes
