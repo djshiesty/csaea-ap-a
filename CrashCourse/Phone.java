@@ -79,4 +79,23 @@ public class Phone {
         
     }
 
+    public String getmodel() {
+        System.out.println(model);
+        return model;
+    }
+
+    public void setbrand(String newModel) {
+        brand = newModel;
+    }
+
+    public double getstorage() {
+        System.out.println(storage);
+        return storage;
+    }
+    public String getbrand() {
+        System.out.println(brand);
+        return brand;
+    }
+
+
 }

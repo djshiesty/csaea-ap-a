@@ -4,6 +4,7 @@ public class PhoneTester {
     public static void main(String[] args) {
 
         Phone sams = new Phone("Samsung", "Galaxy 17", 512.0);
+        
         Phone apps = new Phone("Apple", "Iphone 17", 512.0);
 
         sams.resetPhone();
@@ -15,6 +16,8 @@ public class PhoneTester {
 
         apps.resetPhone();
         apps.upgrade();
+        apps.getmodel();
+        apps.setbrand("Xiaomi");
         apps.usePhone(50);
         apps.fivegToggle();
         apps.batteryStatus();
